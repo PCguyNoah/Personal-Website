@@ -6,8 +6,8 @@ module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
     sassOptions: {
-      extension: 'scss'
-    }
+      extension: 'scss',
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -24,4 +24,3 @@ module.exports = function (defaults) {
   // along with the exports of each module as its value.
   return app.toTree();
 };
-
