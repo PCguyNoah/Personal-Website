@@ -12,7 +12,7 @@ export default Route.extend({
 
   activate() {
     console.log("about me");
-    document.title = 'Noah Beightol | About Me';
+    document.title = 'Noah Beightol | Home';
   },
 
   actions: {

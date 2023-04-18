@@ -1,9 +1,8 @@
 
 <div class="container">
-  <button class="menu-button" tabindex="0" type="button">About Me</button>
+  <button class="menu-button" tabindex="0" type="button" {{action 'handleMenuClick'}}>About Me</button>
   <button class="menu-button" tabindex="0" type="button">Contact</button>
   <button class="menu-button" tabindex="0" type="button">My Projects</button>
 </div>
-
-<div class="text">Noah <br> Beightol</div> 
-<div class="bottom-text bottom">Currently writing <em>&nbsp;elegant&nbsp;</em> solutions at </div> <a tabindex="0" href="https://smartrent.com/" class="bottom-text-inner"> SmartRent.</a>
+{{outlet}}
+      
