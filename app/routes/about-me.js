@@ -7,11 +7,10 @@ export default Route.extend({
 
   init() {
     this._super(...arguments);
-    
   },
 
   activate() {
-    console.log("about me");
+    console.log('about me');
     document.title = 'Noah Beightol | About Me';
   },
 

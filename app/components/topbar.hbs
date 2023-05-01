@@ -1,0 +1,10 @@
+<div class="topbar">
+  <div class="container menu">
+    <button class="item menu-button" tabindex="0" type="button" {{action 'handleHome'}}>Home</button>
+    <button class="item menu-button" tabindex="0" type="button" {{action 'handleAboutMe'}}>About Me</button>
+    <button class="item menu-button" tabindex="0" type="button" {{action 'handleContactMe'}}>Contact</button>
+    <button class="item menu-button" tabindex="0" type="button" {{action 'handleMyProjects'}}>My Projects</button>
+    <div tabindex="0" class="label burger-icon">{{svg-jar "burger-menu"}}</div>
+  </div>
+  {{yield}}
+</div>

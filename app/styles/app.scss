@@ -1,5 +1,15 @@
+@import 'app/styles/topbar.scss';
+@import 'app/styles/about-me.scss';
+
 body {
   background-color: #121317;
+}
+
+.modal-separator {
+  width: 400px;
+  justify-content: center;
+  border-bottom: 1px solid #CAD4DA;
+  margin: 30px 140px;
 }
 
 .text {
@@ -12,22 +22,6 @@ body {
   color: mediumaquamarine;
   font-family: system-ui;
   line-height: 9rem;
-}
-
-.menu-button {
-  font-weight: 500;
-  font-size: 1rem;
-  align-self: center;
-  background: none;
-	color: inherit;
-	border: none;
-  color: mediumaquamarine;
-  font-family: system-ui;
-  cursor: pointer;
-  text-decoration:none; 
-}
-.menu-button:hover {
-  text-decoration:underline;
 }
 
 .bottom-text {
@@ -51,22 +45,14 @@ body {
 a {
   text-decoration:none;
 }
-
 a:hover {
   text-decoration:underline;
 }
 
 .container {
-  font-size: 4rem;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-}
-
-
-
-:focus-visible {
-  outline: 3px round mediumaquamarine;
 }
 
 .hidden-link {
