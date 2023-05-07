@@ -5,6 +5,19 @@ import { inject as service } from '@ember/service';
 export default Component.extend({
   tagName: 'topbar',
   router: service(),
+  onHome: true,
+  init() {
+    this._super(...arguments);
+    
+  },
+
+  didRender() {
+    let currentRoute = this.router.currentRouteName;
+    if (currentRoute === 'home') {
+      this.home = true;
+    }
+    console.log(this.route);
+  },
 
   actions: {
     handleHome() {

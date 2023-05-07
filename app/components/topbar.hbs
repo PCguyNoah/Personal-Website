@@ -1,6 +1,8 @@
 <div class="topbar">
   <div class="container menu">
-    <button class="item menu-button" tabindex="0" type="button" {{action 'handleHome'}}>Home</button>
+    {{#if this.onHome}}
+      <button class="item menu-button" tabindex="0" type="button" {{action 'handleHome'}}>Home</button>
+    {{/if}}
     <button class="item menu-button" tabindex="0" type="button" {{action 'handleAboutMe'}}>About Me</button>
     <button class="item menu-button" tabindex="0" type="button" {{action 'handleContactMe'}}>Contact</button>
     <button class="item menu-button" tabindex="0" type="button" {{action 'handleMyProjects'}}>My Projects</button>
