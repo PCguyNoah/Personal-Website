@@ -4,5 +4,4 @@ import { inject as service } from '@ember/service';
 
 export default Route.extend({
   router: service(),
-  onHome: true,
 });

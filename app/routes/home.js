@@ -15,8 +15,6 @@ export default Route.extend({
   },
 
   actions: {
-    handleMenuClick() {
-      this.router.transitionTo('about-me');
-    },
+
   },
 });

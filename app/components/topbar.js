@@ -1,36 +1,33 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 import { inject as service } from '@ember/service';
+import { action } from '@ember/object';
 
 // This component is the top menu for the entire website
-export default Component.extend({
-  tagName: 'topbar',
-  router: service(),
-  onHome: true,
+export default class TopBarComponent extends Component {
+  tagName = 'topbar';
+  router = service();
+  @tracked onHome = null;
+  
+ 
   init() {
     this._super(...arguments);
-    
-  },
+  }
 
-  didRender() {
-    let currentRoute = this.router.currentRouteName;
-    if (currentRoute === 'home') {
-      this.home = true;
-    }
-    console.log(this.route);
-  },
+  @action 
+  handleContactMe() {
+    this.router.transitionTo('contact-me');
+    console.log('transition to contact me');
+  }
 
-  actions: {
-    handleHome() {
-      this.router.transitionTo('home');
-    },
-    handleAboutMe() {
-      this.router.transitionTo('about-me');
-    },
-    handleContactMe() {
-      console.log('transition to contact me');
-    },
-    handleMyProjects() {
-      console.log('transition to my projects');
-    },
-  },
-});
+  @action
+  currentRoute() {
+    return this.router.currentRouteName;
+  }
+
+  @action
+  handleMyProjects() {
+    console.log('transition to my projects');
+  }
+
+};

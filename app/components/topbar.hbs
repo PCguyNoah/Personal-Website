@@ -1,12 +1,9 @@
 <div class="topbar">
   <div class="container menu">
-    {{#if this.onHome}}
-      <button class="item menu-button" tabindex="0" type="button" {{action 'handleHome'}}>Home</button>
-    {{/if}}
-    <button class="item menu-button" tabindex="0" type="button" {{action 'handleAboutMe'}}>About Me</button>
+    <button class="item menu-button" tabindex="0" type="button" {{action 'handleContactMe'}}>Home</button>
     <button class="item menu-button" tabindex="0" type="button" {{action 'handleContactMe'}}>Contact</button>
     <button class="item menu-button" tabindex="0" type="button" {{action 'handleMyProjects'}}>My Projects</button>
-    <div tabindex="0" class="label burger-icon">{{svg-jar "burger-menu"}}</div>
+    <div class="label burger-icon" tabindex="0">{{svg-jar "burger-menu"}}</div>
   </div>
   {{yield}}
 </div>
